@@ -5,12 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .swiper-slide {
+            height: 300px;
+            background: red;
+        }
+        .swiper-container {
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Start a project!</h1>
-    
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum vel amet est ipsam sint perspiciatis commodi atque numquam dolor tempore iste fugit optio iusto molestias id ad, totam veritatis eveniet!</p>
-    <h3>Week 2 is done!</h3>
-    <h3>Week 3 start!</h3>
+
+    <!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'vertical',
+//   loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  breakpoints: {
+    768: {
+        direction: 'horizontal'
+    }
+}
+});
+    </script>
 </body>
 </html>
